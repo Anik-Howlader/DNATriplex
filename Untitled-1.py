@@ -3,12 +3,10 @@ from tkinter import filedialog
 
 
 root=tk.Tk()
-root.geometry('900x300')
-root.title('Class Test: System and Software Engineering')
-
-
-
-
+root.geometry('950x300')
+root.title('Sequence Analysis')
+root.resizable(False, False)
+root.iconbitmap('dna.ico')
 
 
 def load_fasta():
@@ -107,12 +105,16 @@ def load_fasta():
     sum2 = sum(positions2[i+1]-positions2[i] for i in range(len(positions2)-1))
     codons2.insert(1.0,str(sum2))
 
-    df = (abs((count1*sum1)-(count2*sum2))/float(count1*sum1))*100.00
-    dfh =  round(df,2)
+    df = float(abs((count1*sum1)-(count2*sum2))/float(count1*sum1))*100.00
+    dfh = round(100.00-df,2)
+    if dfh > 80.00:
+        sm2.config(fg="green")
+    else:
+        sm2.config(fg="red")
     s1 = str(dfh)+'%'
     sm2.insert(tk.END,s1)
 
-    
+
     codon = input1.get()
     l3 = len(sequence3)
     color = input2.get()
@@ -123,7 +125,7 @@ def load_fasta():
     start_index = 1.0
 
     while True:
-        start_index = input3.search(codon,start_index,stopindex=tk.END)
+        start_index = input5.search(codon,start_index,stopindex=tk.END)
         if not start_index:
             break
         end_index = f"{start_index}+{len(codon)}c"
@@ -147,8 +149,12 @@ def load_fasta():
     codonp3.insert(1.0,codep3)
     sum3 = sum(positions3[i+1]-positions3[i] for i in range(len(positions3)-1))
     codons3.insert(1.0,str(sum3))
-    df = (abs((count1*sum1)-(count3*sum3))/float(count1*sum1))*100.00
-    dfh =  round(df,2)
+    df = float(abs((count1*sum1)-(count3*sum3))/float(count1*sum1))*100.00
+    dfh =  round(100.00-df,2)
+    if dfh > 80.00:
+        sm3.config(fg="green")
+    else:
+        sm3.config(fg="red")
     s3 = str(dfh)+'%'
     sm3.insert(tk.END,s3)
 

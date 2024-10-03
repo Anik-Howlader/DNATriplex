@@ -1,4 +1,4 @@
-# Sequence Analysis Tool
+# DNATriplex
 
 A simple GUI application built with Tkinter for analyzing DNA sequences from FASTA files. This tool allows users to load 3 FASTA files, input a codon, and visualize occurrences and similarities between sequences.
 
@@ -9,7 +9,8 @@ A simple GUI application built with Tkinter for analyzing DNA sequences from FAS
 - Load up to three FASTA files.
 - View the codon count, positions, and the sum of position differences for each sequence.
 - Calculate and display similarity percentages based on codon occurrences.
-<img width="763" alt="image" src="https://github.com/user-attachments/assets/668c094a-dbbf-4a6c-a81c-42ab5506d5dc">
+<img width="746" alt="image" src="https://github.com/user-attachments/assets/4b568532-91bf-4c00-937d-48e9dd7a5917">
+
 
 ## Example
 

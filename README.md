@@ -9,7 +9,8 @@ A simple GUI application built with Tkinter for analyzing DNA sequences from FAS
 - Load up to three FASTA files.
 - View the codon count, positions, and the sum of position differences for each sequence.
 - Calculate and display similarity percentages based on codon occurrences.
-<img width="746" alt="image" src="https://github.com/user-attachments/assets/4b568532-91bf-4c00-937d-48e9dd7a5917">
+<img width="728" alt="image" src="https://github.com/user-attachments/assets/8bc2a34b-0760-491d-957d-80d49aaae29a">
+
 
 
 ## Example
